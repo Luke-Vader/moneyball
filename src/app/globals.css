@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  --pitch: #0e2a1c;
+  --pitch-light: #163a27;
+  --pitch-dark: #081a11;
+  --chalk: #f3efe3;
+  --chalk-dim: #cfc9b8;
+  --gold: #d3a54a;
+  --gold-dim: #a9843b;
+  --danger: #b3452f;
+  --success: #4a8d5b;
+}
+
+@theme inline {
+  --color-pitch: var(--pitch);
+  --color-pitch-light: var(--pitch-light);
+  --color-pitch-dark: var(--pitch-dark);
+  --color-chalk: var(--chalk);
+  --color-chalk-dim: var(--chalk-dim);
+  --color-gold: var(--gold);
+  --color-gold-dim: var(--gold-dim);
+  --color-danger: var(--danger);
+  --color-success: var(--success);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-stats: var(--font-stats);
+}
+
+body {
+  background-color: var(--pitch);
+  color: var(--chalk);
+}
+
+::selection {
+  background-color: var(--gold);
+  color: var(--pitch-dark);
+}
+
+.font-display {
+  letter-spacing: 0.02em;
+}
+
+.stat-table {
+  font-family: var(--font-stats);
+  font-variant-numeric: tabular-nums;
+}
