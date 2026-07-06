@@ -24,6 +24,7 @@ Every monetary column/value in the app (club budget, stadium/manager/player base
    ```
    There's no in-app way to self-promote to admin — that's intentional.
 7. **Configure match simulation**: as admin, go to `/admin/settings` and set the LLM provider, model, and API key (OpenAI, Anthropic, or any OpenAI-compatible custom endpoint). Nothing can be simulated until this is set.
+8. **Branded sign-in email**: the magic-link email template lives in `supabase/templates/magic_link.html` and is wired up in `supabase/config.toml`. Against a hosted project, sync it with `supabase link --project-ref <ref>` then `supabase config push` (or paste the HTML manually into Dashboard → Authentication → Email Templates → Magic Link). Note: the "Supabase Auth" sender name is a separate setting controlled by SMTP config, not by the template — it stays as-is unless you configure `[auth.email.smtp]` with a real provider.
 
 ## Running
 
